@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Etch-a-Sketch</title>
+    <meta name="author" content="mre91">
+    <meta name="description" content="Etch-A-Sketch">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="buttons">
+      <button id="black">Black</button>
+      <button id="rainbow">Rainbow</button>
+      <button id="resize">Resize</button>
+    </div>
+    <div id="container"></div>
+    <div id="footer">Etch A Sketch</div>
+    <script src="script.js"></script>
+  </body>
+</html>
