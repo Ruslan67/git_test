@@ -8,14 +8,18 @@ function black() {
 }
 
 function genDivs(n) {
-    for (let i = 0; i < n*n; i++) {
-        let cell = document.createElement('div');
-        cell.className = 'cell';
-        document.documentElement.style.setProperty('--numCol', n);
-        container.appendChild(cell);
-        cell.addEventListener("mouseover", function(e){
-            e.target.style.background = "black";
-        });
+    for (let i = 0; i < n; i++) {
+        let containerCell = document.createElement('div');
+        containerCell.classList.add('cell-contianer');
+        for (let j = 0; j < n; j++) {
+            let cell = document.createElement('div');
+            cell.className = 'cell';
+            containerCell.appendChild(cell);
+            cell.addEventListener("mouseover", function(e){
+                e.target.style.background = "black";
+            });
+        }
+        container.appendChild(containerCell);
     }
 }
 
@@ -56,7 +60,7 @@ window.onload = genDivs(gridSize);
 let blackBtn = document.querySelector('#black');
 let rainbowBtn = document.querySelector('#rainbow');
 let resizeBtn = document.querySelector('#resize');
-blackBtn.onclick =  black();
-rainbowBtn.onclick = randomRGB();
-resizeBtn.onclick = resizeGrid();
+blackBtn.onclick = black;
+rainbowBtn.onclick = randomRGB;
+resizeBtn.onclick = resizeGrid;
 
