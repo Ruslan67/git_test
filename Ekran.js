@@ -56,7 +56,7 @@ window.onload = genDivs(gridSize);
 let blackBtn = document.querySelector('#black');
 let rainbowBtn = document.querySelector('#rainbow');
 let resizeBtn = document.querySelector('#resize');
-blackBtn.onclick = () => black();
-rainbowBtn.onclick = () => randomRGB();
-resizeBtn.onclick = () => resizeGrid();
+blackBtn.onclick =  black();
+rainbowBtn.onclick = randomRGB();
+resizeBtn.onclick = resizeGrid();
 
