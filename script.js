@@ -1,5 +1,5 @@
 function black() {
-    let cells = document.querySelectorAll('.cell')
+    let cells = document.querySelectorAll('.cell');
     cells.forEach(cell => {
         cell.addEventListener('mouseover', function(e){
             e.target.style.background = 'black';
@@ -8,6 +8,7 @@ function black() {
 }
 
 function genDivs(n) {
+    const container = document.querySelector('#container');
     for (let i = 0; i < n; i++) {
         let containerCell = document.createElement('div');
         containerCell.classList.add('cell-contianer');
@@ -56,7 +57,7 @@ function resizeGrid() {
 }
 
 let gridSize = 16;
-window.onload = genDivs(gridSize);
+window.onload = () => genDivs(gridSize);
 let blackBtn = document.querySelector('#black');
 let rainbowBtn = document.querySelector('#rainbow');
 let resizeBtn = document.querySelector('#resize');
